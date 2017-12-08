@@ -16,7 +16,10 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "@csstools/postcss-sass": "1.0.0",
+    "autoprefixer": "7.2.2",
     "broccoli-asset-rev": "^2.4.5",
+    "cssstats": "3.1.0",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~2.15.1",
     "ember-cli-app-version": "^3.0.0",
@@ -37,7 +40,9 @@
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.15.0",
     "ember-welcome-page": "^3.0.0",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+    "postcss-reporter": "5.0.0",
+    "postcss-stats-reporter": "0.3.1"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"

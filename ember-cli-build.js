@@ -5,7 +5,31 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    postcssOptions: {
+      compile: {
+        enabled: true,
+        plugins: [
+          {
+            module: require('@csstools/postcss-sass')
+          },
+          { module: require('cssstats') },
+          { module: require('postcss-stats-reporter') },
+          { module: require('postcss-reporter') }
+        ]
+      },
+      filter: {
+        enabled: true,
+        plugins: [
+          {
+            module: require('autoprefixer'),
+            options: {
+              remove: false,
+              browsers: ['last 2 versions']
+            }
+          }
+        ]
+      }
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
