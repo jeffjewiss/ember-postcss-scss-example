@@ -10,7 +10,12 @@ module.exports = function(defaults) {
         enabled: true,
         plugins: [
           {
-            module: require('@csstools/postcss-sass')
+            module: require('@csstools/postcss-sass'),
+            options: {
+              includePaths: [
+                'node_modules/bootstrap-sass/assets/stylesheets'
+              ]
+            }
           },
           { module: require('cssstats') },
           { module: require('postcss-stats-reporter') },
